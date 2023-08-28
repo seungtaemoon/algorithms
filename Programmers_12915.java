@@ -6,8 +6,8 @@ import java.util.Collections;
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
-public class Main {
-    public static void main(String[] args) {
+class Solution {
+    public String[] solution(String[] strings, int n) {
         // 1. 정수 n과 문자열 strings 받기
         // 2. n번째 문자를 기준으로 오름차순 정렬
         // 3. 인덱스 1의 문자열이 같다면, 사전순으로 앞선 문자열이 앞에온다.
@@ -37,8 +37,9 @@ public class Main {
                 }
             }
         }
-        for(String mem: strings){
-            System.out.println(mem);
-        }
+        // for(String mem: strings){
+        //     System.out.println(mem);
+        // }
+        return strings
     }
 }
