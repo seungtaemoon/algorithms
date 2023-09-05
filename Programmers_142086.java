@@ -10,7 +10,7 @@ class Solution {
         // 3. 중첩 반복문을 통해 분리된 문자 배열 순회
         for(int i = 0; i < chars.length; i++){
             for(int j = i+1; j < chars.length; j++){
-                // 4. 두 개의 문자를 비교해 같을 경우 두 값의 위치값을 저장
+                // 4. 두 개의 문자를 비교해 같을 경우 두 값의 위치값 차이를 저장
                 if(chars[i].equals(chars[j])){
                     answer[j] = j - i;
                 }
