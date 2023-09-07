@@ -1,22 +1,21 @@
 // 프로그래머스 132267번 문제 - 콜라 문제
-// 상태: 미해결
+// 상태: 해결 (참조: https://yongku.tistory.com/entry/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%EC%BD%9C%EB%9D%BC-%EB%AC%B8%EC%A0%9C-%EC%9E%90%EB%B0%94JAVA)
 
 class Solution {
     public int solution(int a, int b, int n) {
-        // 1. n  게의 병 내에서 a를 주면 b를 받을 수 있는 병의 수
-        // 2. 20 / 2 = 10
-        // 3. 10 / 2 = 5
-        // 4. 5 / 2 = 2
-        // 5. 2/ 2 = 1
-        // n / 2 = n_new
-        int nNew = 0;
         int sum = 0;
-        while(n >= b){
-            nNew = n/a;
-            sum += nNew;
-            n = nNew;
+        while(true){
+            //1. 가지고 있는 빈 병 수가 a개 보다 미만이면 return한다.
+            if(n < a){
+                break;
+            }
+
+            // 2. 가지고 있는 빈 병 수가 a개 보다 크면 시작
+            sum += (n/a) * b;
+            int remain = n % a;
+
+            n = (n/a) * b + remain;
         }
-        sum = sum + b;
         return sum;
     }
 }
