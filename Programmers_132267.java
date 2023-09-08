@@ -3,19 +3,16 @@
 
 class Solution {
     public int solution(int a, int b, int n) {
+        // 1. 합계를 계산하여 저장할 변수 선언
         int sum = 0;
-        while(true){
-            //1. 가지고 있는 빈 병 수가 a개 보다 미만이면 return한다.
-            if(n < a){
-                break;
+        // 2. a보다 크면 연산을 수행
+        while(n >= a){
+                // 3. n*b/a 만큼의 연산을 반복하여 결과를 합산
+                sum += (n * b)/a;
+                // 4. 다음 n값은 n/a의 나머지를 더한 값
+                n = (n * b)/a + n%a;
             }
-
-            // 2. 가지고 있는 빈 병 수가 a개 보다 크면 시작
-            sum += (n/a) * b;
-            int remain = n % a;
-
-            n = (n/a) * b + remain;
-        }
+        // 5. 결과값 반환
         return sum;
     }
 }
