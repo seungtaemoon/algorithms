@@ -8,4 +8,5 @@
 5. Programmers_132267.java - 콜라 문제
 6. Programmers_12901.java - 2016년
 7. Programmers_135808.java - 과일 장수
+8. Programmers_42840.java - 모의고사
 
