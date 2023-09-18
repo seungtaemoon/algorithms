@@ -10,13 +10,13 @@ class Solution {
         int[] patternThree = {3, 3, 1, 1, 2, 2, 4, 4, 5, 5};
         int[] count = new int[3];
         for(int i = 0; i < answer.length; i++){
-            if( answer[i] == patternOne[i% answer.length]) {
+            if( answer[i] == patternOne[i% patternOne.length) {
                 count[0]++;
             }
-            if( answer[i] == patternTwo[i% answer.length]) {
+            if( answer[i] == patternTwo[i% patternTwo.length]) {
                 count[1]++;
             }
-            if( answer[i] == patternThree[i% answer.length]) {
+            if( answer[i] == patternThree[i% patternThree.length]) {
                 count[2]++;
             }
         }
